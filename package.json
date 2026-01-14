@@ -1,0 +1,28 @@
+{
+  "name": "multi-user-task-manager",
+  "version": "1.0.0",
+  "main": "Backend/server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node Backend/server.js",
+  "dev": "nodemon Backend/server.js",
+  "build": "npx tailwindcss -i ./Backend/src/input.css -o ./Backend/public/output.css --watch",
+  "start:all": "concurrently -n TAILWIND,NODE -c yellow,blue \"npm run build\" \"npm run dev\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.1",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.17.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "tailwindcss": "^3.4.17"
+  }
+}
